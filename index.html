@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Amazon</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<!-- header start -->
+	<header>
+		<div class="header_container">
+			<img src="images/logo.png" class="logo" alt="logo">
+			<div class="search">
+				<input type="text" class="search-box" placeholder="Search for products">
+				<i class="bi bi-search"></i>
+			</div>
+			<div class="left">
+				<div class="toggle">
+					<i class="bi bi-moon-fill toggle-icon"></i>
+					<i class="bi bi-brightness-high-fill toggle-icon"></i>
+					<div class="toggle-ball"></div>
+				</div>
+				<div class="language"> <i class="bi bi-translate"></i> Englis <i class="bi bi-caret-down"></i></div>
+				<div class="log_in">Log In</div>
+			</div>
+			<div onclick=showSidebar() class="list">
+				<i class="bi bi-list"></i>
+			</div>
+			<div class="sidebar">
+				<div onclick=hideSidebar() class="x">
+					<i class="bi bi-x-lg"></i>
+				</div>
+				<div class="sb-toggle">
+					<i class="bi bi-moon-fill sb-toggle-icon"></i>
+					<i class="bi bi-brightness-high-fill sb-toggle-icon"></i>
+					<div class="sb-toggle-ball"></div>
+				</div>
+				<div class="sidebar-buttons">
+					<div class="language"> <i class="bi bi-translate"></i> Englis <i class="bi bi-caret-down"></i></div>
+					<div class="log_in">Log In</div>
+				</div>
+				<div class="filter-sidebar">
+					<div class="sidebarpart">
+						<h4>Customer Reviews</h4>
+
+						<div class="all">
+							<input type="radio" name="rating" id="all" value="all">
+							<label for="all">All</label>
+						</div>
+
+						<div class="fourstar">
+							<input type="radio" name="rating" id="fourstar" value="4">
+							<label for="fourstar">
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star"></i> & up
+							</label>
+						</div>
+
+						<div class="threestar">
+							<input type="radio" name="rating" id="threestar" value="3">
+							<label for="threestar">
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star"></i>
+								<i class="bi bi-star"></i> & up
+							</label>
+						</div>
+
+						<div class="twostar">
+							<input type="radio" name="rating" id="twostar" value="2">
+							<label for="twostar">
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star"></i>
+								<i class="bi bi-star"></i>
+								<i class="bi bi-star"></i> & up
+							</label>
+						</div>
+
+						<div class="onestar">
+							<input type="radio" name="rating" id="onestar" value="1">
+							<label for="onestar">
+								<i class="bi bi-star-fill"></i>
+								<i class="bi bi-star"></i>
+								<i class="bi bi-star"></i>
+								<i class="bi bi-star"></i>
+								<i class="bi bi-star"></i> & up
+							</label>
+						</div>
+					</div>
+
+					<div class="sidebarpart">
+						<h4>Price</h4>
+						<div class="price-range-1">
+							<input type="radio" name="price-section"> All
+						</div>
+						<div class="price-range-2">
+							<input type="radio" name="price-section"> Under $25
+						</div>
+						<div class="price-range-3">
+							<input type="radio" name="price-section"> $25 to $50
+						</div>
+						<div class="price-range-4">
+							<input type="radio" name="price-section"> $50 to $100
+						</div>
+						<div class="price-range-5">
+							<input type="radio" name="price-section"> $100 to $200
+						</div>
+						<div class="price-range-6">
+							<input type="radio" name="price-section"> $200 & Above
+						</div>
+					</div>
+					<div class="sidebarpart">
+						<h4>discount</h4>
+						<div class="discount-rate-1">
+							<input type="radio" name="discount-rate"> All
+						</div>
+						<div class="discount-rate-2">
+							<input type="radio" name="discount-rate"> 10% off or more
+						</div>
+						<div class="discount-rate-3">
+							<input type="radio" name="discount-rate"> 25% off or more
+						</div>
+						<div class="discount-rate-4">
+							<input type="radio" name="discount-rate"> 50% off or more
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<nav>
+			<ul>
+				<li>
+					Today's Deals
+				</li>
+				<li>
+					Custumer Services
+				</li>
+				<li>
+					Registry
+				</li>
+				<li>
+					Gift Cards
+				</li>
+				<li>
+					Sell
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<!-- header end -->
+	<!-- section start -->
+	<section>
+		<h2>Today's Deals</h2>
+		<div class="scroller-wrapper">
+			<button onclick="scrollLeftFunc()"><i class="bi bi-caret-left"></i></button>
+			<div class="scroller" id="scrollContainer">
+				<div class="category">
+					<img src="images/beauty.png">
+					<h4>Beauty</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/mause.jpg">
+					<h4>Computers</h4>
+				</div>
+				<div class="category">
+					<img src="images/tshirt-categry.jpg">
+					<h4>clothes</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+				<div class="category">
+					<img src="images/backpack.webp">
+					<h4>Back to School</h4>
+				</div>
+			</div>
+			<button onclick="scrollRightFunc()"><i class="bi bi-caret-right"></i></button>
+		</div>
+	</section>
+	<!-- section end -->
+	<!-- filter-sidebar start -->
+	<div class="container">
+		<div class="filter-sidebar">
+			<div class="sidebarpart">
+				<h4>Customer Reviews</h4>
+
+				<div class="all">
+					<input type="radio" name="rating" id="all" value="all">
+					<label for="all">All</label>
+				</div>
+
+				<div class="fourstar">
+					<input type="radio" name="rating" id="fourstar" value="4">
+					<label for="fourstar">
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star"></i> & up
+					</label>
+				</div>
+
+				<div class="threestar">
+					<input type="radio" name="rating" id="threestar" value="3">
+					<label for="threestar">
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star"></i>
+						<i class="bi bi-star"></i> & up
+					</label>
+				</div>
+
+				<div class="twostar">
+					<input type="radio" name="rating" id="twostar" value="2">
+					<label for="twostar">
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star"></i>
+						<i class="bi bi-star"></i>
+						<i class="bi bi-star"></i> & up
+					</label>
+				</div>
+
+				<div class="onestar">
+					<input type="radio" name="rating" id="onestar" value="1">
+					<label for="onestar">
+						<i class="bi bi-star-fill"></i>
+						<i class="bi bi-star"></i>
+						<i class="bi bi-star"></i>
+						<i class="bi bi-star"></i>
+						<i class="bi bi-star"></i> & up
+					</label>
+				</div>
+			</div>
+
+			<div class="sidebarpart">
+				<h4>Price</h4>
+				<div class="price-range-1">
+					<input type="radio" name="price-section"> All
+				</div>
+				<div class="price-range-2">
+					<input type="radio" name="price-section"> Under $25
+				</div>
+				<div class="price-range-3">
+					<input type="radio" name="price-section"> $25 to $50
+				</div>
+				<div class="price-range-4">
+					<input type="radio" name="price-section"> $50 to $100
+				</div>
+				<div class="price-range-5">
+					<input type="radio" name="price-section"> $100 to $200
+				</div>
+				<div class="price-range-6">
+					<input type="radio" name="price-section"> $200 & Above
+				</div>
+			</div>
+			<div class="sidebarpart">
+				<h4>discount</h4>
+				<div class="discount-rate-1">
+					<input type="radio" name="discount-rate"> All
+				</div>
+				<div class="discount-rate-2">
+					<input type="radio" name="discount-rate"> 10% off or more
+				</div>
+				<div class="discount-rate-3">
+					<input type="radio" name="discount-rate"> 25% off or more
+				</div>
+				<div class="discount-rate-4">
+					<input type="radio" name="discount-rate"> 50% off or more
+				</div>
+			</div>
+		</div>
+		<!-- filter-sidebar end -->
+		<!-- products part start -->
+		<div class="products-part">
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+			<div class="product">
+				<img src="images/candle.jpg">
+				<div>30% off</div>
+				<p>$7.99</p>
+				<h4>12-Pack Candles</h4>
+			</div>
+			<div class="product">
+				<img src="images/tshirt.jpg">
+				<div>20% off</div>
+				<p>$16.99</p>
+				<h4>Basic Male Blue T-shirt</h4>
+			</div>
+		</div>
+	</div>
+	<!-- products part end -->
+	<!-- footer start -->
+	<footer>
+		<div class="footer-top">
+
+			<button id="back-btn">Back to top</button>
+		</div>
+		<div class="footer-mid">
+			<div class="list">
+				<h3>Get to Know Us</h3>
+				<h5>Careers</h5>
+				<h5>Blog</h5>
+				<h5>About Amazon</h5>
+				<h5>Investor Relations</h5>
+				<h5>Amazon Devices</h5>
+				<h5>Amazon Science</h5>
+			</div>
+			<div class="list">
+				<h3>Make Money With Us</h3>
+				<h5>Sell products on Amazon</h5>
+				<h5>Sell on Amazon Business</h5>
+				<h5>Sell apps on Amazon</h5>
+				<h5>Become an Affiliate</h5>
+				<h5>Advertise Your Products</h5>
+				<h5>Self-Publish with Us</h5>
+			</div>
+			<div class="list">
+				<h3>Amazon Payment Products</h3>
+				<h5>Amazon Business Card</h5>
+				<h5>Shop with Points</h5>
+				<h5>Reload Your Balance</h5>
+				<h5>Amazon Currency Converter</h5>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<img src="images/logo.png" class="logo">
+			<div class="language"> <i class="bi bi-translate"></i> Englis <i class="bi bi-caret-down"></i></div>
+			<div class="money">$ USD-U.S. Dollar</div>
+			<div class="country"><i class="bi bi-flag"></i> United States</div>
+
+		</div>
+	</footer>
+	<!-- Footer end -->
+	<script src="script.js"></script>
+</body>
+
+</html>
